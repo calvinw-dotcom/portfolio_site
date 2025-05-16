@@ -1,0 +1,32 @@
+*{
+    background-color: #FAF9F6 ;
+}
+
+h1{
+    font-family: sans-serif;
+    text-align: center;
+    size: 80%;
+}
+
+h3{
+    font-family: sans-serif;
+    text-align: center;
+    size: 80%;
+}
+
+hr{
+   width: 80%; 
+}
+
+.container{
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 30px;
+    width: 80%;
+}
+
+.container img{
+    border-radius: 50px;
+    
+}
