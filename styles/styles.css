@@ -5,7 +5,7 @@
 h1{
     font-family: 'Poppins',sans-serif;
     text-align: center;
-    font-weight: bold;
+    font-weight: bold   ;
     size: 80%;
 }
 
@@ -53,11 +53,17 @@ hr{
     font-size: x-large;
 }
 
-.card-content p{
+.project-description {
     text-align: left;
     font-family: sans-serif;
     font-weight: lighter;
     color: rgb(49, 44, 44);
     
+}
 
+.project-subscript{
+    text-align: left;
+    font-family: sans-serif;
+    font-weight:10;
+    color: grey;
 }
