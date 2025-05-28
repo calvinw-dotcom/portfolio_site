@@ -22,7 +22,7 @@ hr{
 .container{
     display: flex;
     align-items: flex-start;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 35px;
     margin: auto;
     margin-top: 30px;
@@ -63,6 +63,14 @@ hr{
     
 }
 
+.read-more{
+    font-family: sans-serif;
+    font-weight:10;
+    text-decoration: underline;
+    border: 1px;
+    text-align: left;
+}
+
 .project-subscript{
     text-align: left;
     font-family: sans-serif;
@@ -70,6 +78,13 @@ hr{
     color: grey;
 }
 
+.hidden-content{
+    display: none;
+}
+
+.reveal-button{
+    display: block;
+}
 
 .btn{
     border: 1px black solid;
