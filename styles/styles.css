@@ -2,6 +2,15 @@
     background-color: #FAF9F6 ;
 }
 
+body {
+  padding-top: 60px;
+}
+
+
+.intro{
+    height: 100pv;
+}
+
 h1{
     font-family: 'Poppins',sans-serif;
     text-align: center;
@@ -98,9 +107,11 @@ hr{
     background-color: white;
     text-decoration: none;
     transition: transform 0.3s;
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
+    z-index: 1100;
+
 }
 
 .btn:hover{
@@ -109,17 +120,22 @@ hr{
 }
 
 nav{
+    position: fixed;
+    width:100%;
     background-color: #FAF9F6;
     overflow:hidden;
+    top: 0px;
+    text-align: center;
 }
 
 .topnav a{
-    float: middle;
+    display: inline-block;
     color: black;
     text-align: center;
     padding: 14px 16px;
     font-size: 17px;
     text-decoration: none;
+    font-family: sans-serif;
 
 }
 
