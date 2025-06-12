@@ -1,6 +1,6 @@
 # Calvin Worthington's Portfolio Website
 
-Welcome to my personal portfolio website! This site showcases my projects, experience, and contributions in a clean and accessible format. It’s built with HTML, CSS, and JavaScript for simplicity and responsiveness.
+Welcome to my personal portfolio website! This site showcases my projects, experience, and contributions in a clean and accessible format. It’s built with HTML, CSS, and JavaScript for simplicity and responsiveness. Beyond displaying my work, creating this portfolio allowed me to deveop the fundamentals of web development I needed to contribute in my volunteer role as web developer at East London WaterWorks Park (which I mention more on my site!)
 
 ## 🌐 Live Demo
 
@@ -16,7 +16,7 @@ Portfolio website/
 ├── app.js               # JavaScript for interactivity
 ├── styles/
 │   └── styles.css       # Custom styling
-├── images/              # (If any) Project/media images
+├── images/              # Project/media images
 └── .git/                # Git configuration (can be ignored)
 ```
 
@@ -49,7 +49,3 @@ No build tools or dependencies are needed—this is a pure HTML/CSS/JS project.
 Feel free to reach out:
 - **Email:** worthingtonc9@gmail.com
 - Or click the **“Contact me”** button on the website
-
-## 📝 License
-
-This project is open-source and free to use for educational or personal portfolio purposes.
