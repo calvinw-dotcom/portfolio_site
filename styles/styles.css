@@ -101,7 +101,6 @@ hr{
     align-items: left;
     margin-top: 20px;
     width: 80%;
-    width: 80%;
     box-sizing: border-box;
 }
 
@@ -146,10 +145,14 @@ hr{
 }
 
 .hidden-content.reveal-button{
-    width: 605.4px;
-    overflow-wrap:break-word;
-
-
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    max-width: 605.4px;
 }
 
 .btn{
