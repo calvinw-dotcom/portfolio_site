@@ -10,7 +10,7 @@ document.querySelector('.projects').addEventListener('click',function(e){ //list
 
 })
 
-document.querySelector('.contributions').addEventListener('click',function(e){ //listens for all clicks on parent container
+document.querySelector('.contributions').addEventListener('click',function(e){
     const target = e.target;
     if (target.matches('.read-more')){
         const hiddenContent = target.previousElementSibling;
