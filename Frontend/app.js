@@ -20,3 +20,10 @@ document.querySelector('.contributions').addEventListener('click',function(e){
     }
 
 })
+
+fetch('/api/latest-commit')
+  .then(res => res.json())
+  .then(data => {
+    console.log("Latest repo:", data.name);
+    console.log("Last updated:", new Date(data.lastCommitDate).toLocaleString());
+  });
