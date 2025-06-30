@@ -31,10 +31,16 @@
             <a href="https://github.com/calvinw-dotcom" target="_blank"><img src="image/Github.png" alt=""></a>
             <a href="https://www.linkedin.com/in/calvin-harvey-worthington-0b1184165/" target="_blank"><img src="image/LinkedIn.png" alt=""></a>
         </div>
-    </div>
+        
+        <div class="repo-commit">
+            <div id="status">
 
-    <div id="latest-commit-info">
-        <p>Loading latest commit...</p>
+            </div>
+            <div class="latest-commit-info" id="latest-commit-info">
+                <p>Loading latest commit...</p>
+            </div>
+        </div>
+
     </div>
 
     
@@ -165,7 +171,7 @@
 
         <div class="job">
             <h4>Corporate tax Senior Assocaite - Blick Rothenberg </h4>
-            <p class='date'> February 2023 - March 2025</p>
+            <p class='date'> March 2023 - March 2025</p>
             <div class="role">
                 <ul>
                     <li>
@@ -215,17 +221,23 @@
             .then(res => res.json())
             .then(data => {
             const container = document.getElementById('latest-commit-info');
+            const parentContainer = document.getElementById('status')
             if (data && data.name && data.lastCommitDate) {
+                parentContainer.classList.toggle('positive-indicator');
+                const repo_name = data.name.replace("_"," ");
                 container.innerHTML = `
-                <strong>Latest updated repo:</strong> ${data.name}<br>
-                <em>Last commit:</em> ${new Date(data.lastCommitDate).toLocaleString()}
+                <strong>Latest updated repo:</strong> ${repo_name}<br>
+                <strong>Last commit:</strong> ${new Date(data.lastCommitDate).toLocaleString()}
                 `;
             } else {
+                parentContainer.classList.toggle('negative-indicator');
                 container.innerHTML = "Could not load commit data.";
             }
             })
             .catch(err => {
+            const parentContainer = document.getElementById('status')
             document.getElementById('latest-commit-info').innerText = "Error loading latest commit.";
+            parentContainer.classList.toggle('negative-indicator');
             console.error("Fetch error:", err);
             });
     </script>
