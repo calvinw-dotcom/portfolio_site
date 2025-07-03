@@ -20,6 +20,12 @@ Portfolio website/
 │   └──server.js         # Call to github API  
 └── .git/                # Git configuration (can be ignored)
 
+Ensure Node.js and Git are installed.
+
+On Windows, you can use PowerShell, Command Prompt, or Git Bash.
+
+On macOS and Linux, use the built-in Terminal.
+
 ```
 
 ## ✨ Features
