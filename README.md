@@ -16,13 +16,17 @@ Portfolio website/
 ├── styles/
 │   └── styles.css       # Custom styling
 ├── images/              # Project/media images
+├── backend/
+│   └──server.js         # Call to github API  
 └── .git/                # Git configuration (can be ignored)
+
 ```
 
 ## ✨ Features
 
+- **Call to GitHub API to show latest commits**
+- **Error handling**
 - **Responsive navigation bar**
-- **Animated section reveals**
 - **Expandable “Read more” functionality**
 - **Clean and modern aesthetic using Google Fonts (Poppins)**
 - **Contact button with pre-filled email draft**
@@ -39,9 +43,20 @@ To run the project locally:
    ```bash
    cd portfolio_site
    ```
-3. **Open `index.html` in your browser**
+3. **Install dependencis**
+   ```bash
+   npm install
+   ```
+4. **Navigate to the backend**
+   ```bash
+   cd backend
+   ```
+5. **Start local server**
+   ```bash
+   node server.js
+   ```
+6. **Open `index.html` in your browser**
 
-No build tools or dependencies are needed—this is a pure HTML/CSS/JS project.
 
 ## 📬 Contact
 
