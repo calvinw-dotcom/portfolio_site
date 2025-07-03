@@ -217,7 +217,7 @@
 
 <!-- Best practice to include JS script element at the bottom as file is passed top to bottom. Render page contents while executing JS -->
     <script>
-        fetch('https://portfolio-site-s775.onrender.com/api/latest-commit')
+        fetch('https://portfolio-site-s775.onrender.com/api/latest-commit') //correct BE URL
             .then(res => res.json())
             .then(data => {
             const container = document.getElementById('latest-commit-info');
