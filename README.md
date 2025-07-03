@@ -4,8 +4,7 @@ Welcome to my personal portfolio website! This site showcases my projects, exper
 
 ## 🌐 Live Demo
 
-[View Portfolio Site](#)  
-*(Replace this with your actual deployed link if available)*
+https://calvinw-dotcom.github.io/portfolio_site/
 
 ## 📁 Project Structure
 
