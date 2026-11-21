@@ -32,8 +32,15 @@ app.get('/api/latest-commit', async (req, res) => {
       headers: {
         Authorization: `token ${token}`,
         Accept: 'application/vnd.github+json'
+        }
       }
-    });
+    );
+
+    if (!response.ok){
+      throw new Error(
+          `GitHub API request failed: ${repoResponse.status} ${repoResponse.statusText}`
+      )
+    }
 
     const repos = await repoResponse.json();
 
