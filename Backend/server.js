@@ -50,8 +50,15 @@ app.get('/api/latest-commit', async (req, res) => {
       const commitsResponse = await fetch(commitsUrl, {
         headers: {
           Authorization: `token ${token}`
+          }
         }
-      });
+      );
+
+      if (!commitsResponse.ok){
+        throw new Error(
+            `Github commits request failed: ${commitsResponse.status}`
+        )
+      }
 
       const commits = await commitsResponse.json();
       const lastCommitDate = commits[0]?.commit?.committer?.date;
