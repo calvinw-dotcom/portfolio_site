@@ -1,303 +1,297 @@
-*{
-    background-color: #FAF9F6 ;
+:root {
+    --background: #F3F1EC;
+    --surface: #FFFFFF;
+    --border: #B0AAA0;
+    --text: #262626;
+    --accent: #276B63;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
+    margin: 0;
+    padding-bottom: 3rem;
+    background: var(--background);
+    color: var(--text);
+    font-family: system-ui, sans-serif;
+    line-height: 1.65;
 }
 
-
-.intro{
-    width:80%;
-    text-align:center;
-    margin: auto;
-    padding-bottom: 0;
-    margin-top: 200px;
-    height: 80vh;
-    
-}
-h1{
-    font-family: 'Poppins',sans-serif;
-    text-align: center;
-    font-weight: bold   ;
-    size: 80%;
+a {
+    color: var(--accent);
+    text-underline-offset: 0.2em;
 }
 
-h3{
-    font-family: 'Poppins',sans-serif;
-    text-align: center;
-    size: 80%;
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
-
-.intro p{
-    font-family: 'Poppins',sans-serif;
-    text-align: center;
-    width: 70%;
-    margin: 0 auto;
-    font-weight: 350;
-}
-
-
-.links{
-    flex: 1;
-}
-
-.links a{
-    padding: 20px;
-    margin-bottom: 0;
-}
-
-.links img{
-    width: 45px;
-    margin-top: 25px;
-}
-
-
-hr{
-   width: 80%; 
-}
-
-.projects{
-    padding-bottom: 150px;
-}
-
-
-.container{
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    border: 3px solid black;
-    border-radius: 35px;
-    margin: auto;
-    margin-top: 30px;
-    width: 80%;
-    max-width: 80%;
-    /* gap between image and text */
-    gap: 20px;
-    overflow: hidden;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    max-width: 1052.280px; /* such as copout of a fix*/
-}
-
-.container a{
-    text-decoration: none;
-    color: black;
-}
-.container img {
-    padding: 8px;
-    border-radius: 50px;
-    width: 125px;
-    height: 125px;         /* force fixed height */
-    object-fit: cover;     /* crop to fill */
-    background-clip: content-box;
-}
-
-
-.card-content{
-    flex: 1;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    margin-top: 20px;
-    width: 80%;
-}
-
-.card-content h4{
-    font-family: sans-serif;
-    margin: 0;
-    font-size: x-large;
-    width: 80%;
-}
-.card-content p{
     justify-content: center;
+    gap: 0.25rem 0.75rem;
+    padding: 0.625rem 1rem;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
 }
 
-.hidden-content{
-    font-family: sans-serif;
-    margin: 0;
-    font-size: medium;
-    width: 80%;
-    margin-bottom: 10px;
+.topnav a {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
 }
 
-.project-description {
-    text-align: left;
-    font-family: sans-serif;
-    font-weight: lighter;
-    color: rgb(49, 44, 44);
-    box-sizing: border-box;
-    overflow-wrap: break-word;
-    width: 100%;
-    flex-grow: 1;
-    
-}
-
-.read-more{
-    font-family: sans-serif;
-    font-weight:10;
+.topnav a:hover {
+    background: var(--surface);
     text-decoration: underline;
-    border: 1px;
-    text-align: left;
-    padding: 0px;
-    cursor: pointer;
 }
 
-.project-subscript{
-    text-align: left;
-    font-family: sans-serif;
-    font-weight:10;
-    color: grey;
+.topnav .btn--contact {
+    background: var(--accent);
+    color: var(--surface);
 }
 
-.hidden-content{
+.topnav .btn--contact:hover {
+    background: #20574F;
+}
+
+.intro,
+.projects,
+.contributions,
+.experience {
+    width: min(100% - 2rem, 65rem);
+    margin-inline: auto;
+}
+
+.intro {
+    padding-block: clamp(2.75rem, 7vw, 5rem);
+    text-align: center;
+}
+
+.intro h1 {
+    margin: 0;
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.intro h3 {
+    margin: 0.5rem 0 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+}
+
+.intro hr {
+    width: 3rem;
+    margin: 1.25rem auto;
+}
+
+.intro > p {
+    max-width: 62ch;
+    margin: 0 auto;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.links a {
+    display: grid;
+    place-items: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.links a:hover {
+    background: var(--surface);
+}
+
+.links img {
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+    object-fit: contain;
+}
+
+.projects,
+.contributions,
+.experience {
+    scroll-margin-top: 5rem;
+}
+
+.contributions,
+.experience {
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow-wrap: anywhere;
+    transition: box-shadow 0.2s ease;
+}
+
+.container + .container {
+    margin-top: 1rem;
+}
+
+.container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.container img {
+    display: block;
+    width: 6.5rem;
+    max-width: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.75rem;
+    object-fit: contain;
+}
+
+.container img[src*="ENCODE_logo"] {
+    background-color: #E9B58E;
+    border-radius: 16px;
+}
+
+.card-content h4,
+.job h4 {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+.project-description,
+.hidden-content {
+    margin: 0.5rem 0 0;
+}
+
+.hidden-content {
     display: none;
 }
 
-.reveal-button{
+.hidden-content.reveal-button {
     display: block;
 }
 
-.hidden-content.reveal-button{
-    flex: 1;
+.read-more {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+    border: 0;
+    background: transparent;
+    color: var(--accent);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    text-decoration-thickness: 2px;
+}
+
+.project-subscript,
+.date {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+}
+
+.experience {
+    max-width: 52rem;
+}
+
+.job {
+    margin-top: 1.5rem;
+}
+
+.role ul {
+    margin: 0.5rem 0 0;
+    padding-inline-start: 1.25rem;
+}
+
+.repo-commit {
     display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    width: 80%;
-    box-sizing: border-box;
-    max-width: 605.4px;
+    align-items: center;
+    gap: 0.875rem;
+    width: 360px;
+    max-width: 100%;
+    margin: 1.25rem auto 0;
+    padding: 0.75rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-.btn{
-    border: 1px black solid;
-    border-radius: 15px;
-    padding: 15px;
-    font-family: 'Poppins',sans-serif;
-    color: black;
-    background-color: white;
-    text-decoration: none;
-    transition: transform 0.3s;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1100;
-
+.repo-commit #status {
+    flex: 0 0 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background: #736E66;
 }
 
-.btn:hover{
-    transform: scale(1.15);
-    
-}
-
-nav{
-    position: fixed;
-    width:100%;
-    background-color: #FAF9F6;
-    overflow:hidden;
-    top: 0px;
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-.topnav a{
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 17px;
-    text-decoration: none;
-    font-family: sans-serif;
-
-}
-
-.topnav a:hover{
-    background-color: aliceblue;
-}
-
-.topnav a:active{
-    background-color: aliceblue;
-}
-
-.experience{
-    width: 80%;
-}
-
-.experience h4{
-    font-family: sans-serif;
-    text-align: left;
-    padding: 0px;
-    margin-bottom: 0;
-
-}
-
-.date{
-    margin-top: 0px;
-    margin-bottom: 20px;
-    font-family: 'Poppins',sans-serif;
-    margin-top: 0px;
-    font-weight: 10;
-    color: gray;
-    text-decoration: underline solid;
-}
-
-.role {
-    font-family: 'Poppins',sans-serif;
-    text-align: left;
-    margin: 0 auto;
-}
-
-.repo-commit{
-    border: 1px black solid;
-    border-radius: 15px;
-    padding: 10px;
-    width: 30%;
-    margin: auto;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
+.repo-commit #status.positive-indicator {
+    background: var(--accent);
 }
 
 .latest-commit-info {
-    width: 80%;
-
+    min-width: 0;
+    padding-inline-start: 0.875rem;
+    border-inline-start: 1px solid var(--border);
+    font-size: 0.875rem;
+    text-align: left;
+    overflow-wrap: anywhere;
 }
 
-.positive-indicator {
-    margin:auto;
-    margin-right: 20px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: green;
-    animation: flash 1s infinite;
-    margin-left: 10px;
-    display: inline-block;
+.latest-commit-info p {
+    margin: 0;
 }
 
-.negative-indicator{
-    margin:auto;
-    margin-right: 20px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: lightgray;
-    animation: flash 1s infinite;
-    margin-left: 10px;
-    display: inline-block;
-}
+@media (max-width: 36rem) {
+    .topnav {
+        position: static;
+    }
 
-@keyframes flash {
-  0%   { opacity: 1; }
-  50%  { opacity: 0.2; }
-  100% { opacity: 1; }
-}
+    .projects,
+    .contributions,
+    .experience {
+        scroll-margin-top: 1rem;
+    }
 
-
-.latest-commit-info{
-    font-family: 'Poppins',sans-serif;
+    .container {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1.25rem;
+    }
 }
