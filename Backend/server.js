@@ -7,7 +7,10 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3001;
 app.use(cors({
-  origin: 'https://calvinw-dotcom.github.io'
+  origin:
+      ['https://calvinw-dotcom.github.io',
+        'http://localhost:63342'
+      ]
 }));
 
 app.get('/api/hello', (req, res) => {
