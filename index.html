@@ -216,31 +216,5 @@
 <!-- last commit banner -->
 
 <!-- Best practice to include JS script element at the bottom as file is passed top to bottom. Render page contents while executing JS -->
-    <script>
-        fetch('https://portfolio-site-s775.onrender.com/api/latest-commit') //correct BE URL
-            .then(res => res.json())
-            .then(data => {
-            const container = document.getElementById('latest-commit-info');
-            const parentContainer = document.getElementById('status')
-            if (data && data.name && data.lastCommitDate) {
-                parentContainer.classList.toggle('positive-indicator');
-                const repo_name = data.name.replace("_"," ");
-                container.innerHTML = `
-                <strong>Latest updated repo:</strong> ${repo_name}<br>
-                <strong>Last commit:</strong> ${new Date(data.lastCommitDate).toLocaleString()}
-                `;
-            } else {
-                parentContainer.classList.toggle('negative-indicator');
-                container.innerHTML = "Could not load commit data.";
-            }
-            })
-            .catch(err => {
-            const parentContainer = document.getElementById('status')
-            document.getElementById('latest-commit-info').innerText = "Error loading latest commit.";
-            parentContainer.classList.toggle('negative-indicator');
-            console.error("Fetch error:", err);
-            });
-    </script>
-
     <script src="app.js"></script>
 </body>
